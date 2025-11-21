@@ -74,15 +74,6 @@ header nav a:hover {color:#ff6a33;}
 }
 .project-card:hover .overlay {opacity:1; transform:scale(1.02);}
 .project-card h4 {color:#ff4c00; margin-bottom:15px; font-family:'Montserrat',sans-serif;}
-.project-card p {font-size:0.95rem; line-height:1.5; margin-bottom:15px;}
-.project-card .skills {
-    display:flex; flex-wrap:wrap; justify-content:center; gap:10px;
-}
-.project-card .skills div {
-    background:#ff4c00; padding:5px 10px; border-radius:8px; font-size:0.85rem;
-    transition:0.3s;
-}
-.project-card .skills div:hover {background:#ff6a33; transform:scale(1.05);}
 
 /* ===== Modal ===== */
 .modal {
@@ -113,7 +104,9 @@ header nav a:hover {color:#ff6a33;}
 .modal.active .modal-content {transform:scale(1);}
 .modal-content h2 {color:#ff4c00; margin-bottom:15px;}
 .modal-content p {color:#fff; line-height:1.7; margin-bottom:20px;}
-.modal-content .skills {justify-content:center; margin-top:10px;}
+.modal-content .skills {display:flex; flex-wrap:wrap; justify-content:center; gap:10px;}
+.modal-content .skills div {background:#ff4c00; padding:5px 10px; border-radius:8px; font-size:0.85rem; transition:0.3s;}
+.modal-content .skills div:hover {background:#ff6a33; transform:scale(1.05);}
 .close-btn {
     position:absolute;
     top:15px; right:20px;
@@ -159,23 +152,18 @@ footer a:hover {color:#ff6a33;}
 <!-- Projects Section -->
 <section class="projects-page" id="projects-page">
     <div class="project-grid">
-        <!-- Project 1 -->
         <div class="project-card" data-aos="zoom-in" data-aos-delay="100" onclick="openModal('project1')">
             <img src="https://img.freepik.com/free-vector/devops-team-abstract-concept-vector-illustration-software-development-team-member-agile-workflow-devops-team-model-it-teamwork-project-management-integrated-practice-abstract-metaphor_335657-2299.jpg?w=740&t=st=1698272400~exp=1698273000~hmac=abc" alt="Automated CI/CD Pipeline">
             <div class="overlay">
                 <h4>Automated CI/CD Pipeline & Dockerized Deployment</h4>
             </div>
         </div>
-
-        <!-- Project 2 -->
         <div class="project-card" data-aos="zoom-in" data-aos-delay="200" onclick="openModal('project2')">
             <img src="https://www.goapl.com/wp-content/uploads/2022/06/Data-centre-Build.png" alt="Multi-Tier AWS Deployment">
             <div class="overlay">
                 <h4>Deploying a Multi-Tier Web Application on AWS</h4>
             </div>
         </div>
-
-        <!-- Project 3 -->
         <div class="project-card" data-aos="zoom-in" data-aos-delay="300" onclick="openModal('project3')">
             <img src="https://cloud9infosystems.com/wp-content/uploads/2024/06/Business-Challenges-.png" alt="CI/CD Automation with Kubernetes">
             <div class="overlay">
@@ -224,9 +212,8 @@ const projects = {
     },
     project3: {
         title: "End-to-End CI/CD Automation (Jenkins, Terraform, Docker & Kubernetes)",
-        desc: "
-Fully automated CI/CD pipeline for Java app on AWS EKS using Terraform, Docker, Jenkins, Kubernetes, Ansible & Trivy security scans.",
-        skills: ["Terraform","Jenkins","Docker","Kubernetes","AWS EKS","trivy"]
+        desc: "Fully automated CI/CD pipeline for Java app on AWS EKS using Terraform, Docker, Jenkins, Kubernetes, Ansible & Trivy security scans.",
+        skills: ["Terraform","Jenkins","Docker","Kubernetes","AWS EKS","Trivy"]
     }
 };
 
