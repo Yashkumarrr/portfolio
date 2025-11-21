@@ -25,10 +25,15 @@ a {text-decoration:none; color:inherit;}
 img {max-width:100%; display:block;}
 
 /* ===== Header ===== */
-header {background:#0a0a0a; color:#fff; padding:20px 50px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; border-bottom:1px solid #222;}
+header {background:#0a0a0a; color:#fff; padding:20px 50px; display:flex; justify-content:space-between; align-items:center; position:sticky; top:0; z-index:1000; border-bottom:1px solid #222; flex-wrap:wrap;}
 header .logo {font-family:'Montserrat', sans-serif; font-size:2rem; font-weight:800; color:#ff4c00;}
 header nav a {margin-left:25px; font-weight:500; transition:0.3s; color:#fff;}
 header nav a:hover {color:#ff6a33;}
+
+/* ===== Top Social Buttons ===== */
+.social-links {display:flex; gap:15px; margin-top:10px;}
+.social-links a {color:#fff; font-size:1.2rem; padding:8px 12px; border:1px solid #ff4c00; border-radius:8px; transition:0.3s;}
+.social-links a:hover {background:#ff4c00; color:#fff; transform:scale(1.1);}
 
 /* ===== Hero Section ===== */
 .hero {
@@ -87,8 +92,8 @@ header nav a:hover {color:#ff6a33;}
 
 /* ===== About Section ===== */
 .about {background: linear-gradient(135deg,#0a0a0a,#1a1a1a); padding:100px 50px; position:relative; overflow:hidden;}
-.about-container {display:grid; grid-template-columns:repeat(auto-fit,minmax(350px,1fr)); gap:50px; align-items:center;}
-.about img {border-radius:25px; box-shadow:0 15px 50px rgba(255,76,0,0.5); transform:rotate(-2deg); transition:0.5s;}
+.about-container {display:grid; grid-template-columns:1fr 2fr; gap:50px; align-items:center;}
+.about img {border-radius:25px; box-shadow:0 15px 50px rgba(255,76,0,0.5); width:100%; max-width:450px; transform:rotate(-2deg); transition:0.5s;}
 .about-content h2 {font-family:'Montserrat',sans-serif; font-size:3rem; color:#ff4c00; margin-bottom:20px; text-shadow:0 0 20px rgba(255,76,0,0.7);}
 .about-content p {font-size:1.1rem; line-height:1.8; margin-bottom:20px;}
 .about-tags {display:flex; gap:20px; flex-wrap:wrap;}
@@ -116,6 +121,10 @@ footer a {color:#ff4c00; margin:0 10px; transition:0.3s;}
 footer a:hover {color:#ff6a33;}
 
 /* ===== Responsive ===== */
+@media(max-width:1024px){
+    .about-container {grid-template-columns:1fr;}
+    .about img {max-width:100%;}
+}
 @media(max-width:768px){
     header {flex-direction:column; gap:15px;}
     .hero h1 {font-size:2.5rem;}
@@ -136,12 +145,17 @@ footer a:hover {color:#ff6a33;}
         <a href="#edu">Education</a>
         <a href="#contact">Contact</a>
     </nav>
+    <div class="social-links">
+        <a href="https://github.com/Yashkashyapp" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/yash-kashyappp/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        <a href="https://www.linkedin.com/in/yash-devopsengineer/overlay/1762518158319/single-media-viewer/?profileId=ACoAADWp3w0B_QRyQp3LwsEBgfJTkPBsyFTzrLs" target="_blank"><i class="fa-solid fa-file"></i> Resume</a>
+    </div>
 </header>
 
-<!-- ===== Hero Section ===== -->
+<!-- Hero Section -->
 <section class="hero" id="hero">
     <h1 data-aos="fade-down" data-aos-delay="200">Yash Kumar</h1>
-    <p data-aos="fade-up" data-aos-delay="400">Professional Cloud & DevOps Engineer</p>
+    <p data-aos="fade-up" data-aos-delay="400">Cloud & DevOps Engineer</p>
     <button data-aos="zoom-in" data-aos-delay="600">Hire Me</button>
     <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="cloud" alt="cloud icon">
     <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="cloud" alt="cloud icon">
@@ -219,6 +233,7 @@ footer a:hover {color:#ff6a33;}
             <p>I am Yash Kumar, a passionate Cloud & DevOps Engineer dedicated to building scalable, reliable, and secure infrastructure. With hands-on experience in AWS, Docker, Kubernetes, CI/CD pipelines, and Infrastructure as Code (Terraform & Ansible), I help businesses automate processes, reduce downtime, and optimize cloud costs.</p>
             <p>I thrive on solving complex problems, improving system performance, and implementing robust solutions that ensure business continuity and efficiency. My goal is to bridge the gap between development and operations, creating smooth workflows that accelerate innovation.</p>
             <p>When I’m not automating pipelines or deploying cloud solutions, I love learning new technologies, exploring automation trends, and sharing knowledge with fellow professionals.</p>
+            
             <div class="about-tags">
                 <div style="background:#ff4c00;">Innovation</div>
                 <div style="background:#ff6a33;">Reliability</div>
@@ -266,10 +281,8 @@ footer a:hover {color:#ff6a33;}
 <footer>
     &copy; 2025 Yash Kumar. All Rights Reserved.
     <div>
-        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#"><i class="fa-brands fa-twitter"></i></a>
-        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/yash-kashyappp/"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://github.com/Yashkashyapp"><i class="fa-brands fa-github"></i></a>
     </div>
 </footer>
 
