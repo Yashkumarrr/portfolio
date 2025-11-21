@@ -225,57 +225,8 @@ const projects = {
     project3: {
         title: "End-to-End CI/CD Automation (Jenkins, Terraform, Docker & Kubernetes)",
         desc: "
-End-to-End CI/CD Automation with Jenkins Pipeline Script, Terraform, Docker & Kubernetes (AWS EKS)
-End-to-End CI/CD Automation with Jenkins Pipeline Script, Terraform, Docker & Kubernetes (AWS EKS)
-Company logo
-Associated with Intellipaat
-Associated with Intellipaat
-Designed and implemented a fully automated CI/CD pipeline for a monolithic Java-based application, enabling efficient builds, containerization, deployment, and infrastructure automation using modern DevOps tools and AWS Cloud.
-
-This project follows real-world enterprise CI/CD workflows — ensuring secure, version-controlled, and time-based production releases.
-
-🔹 Key Responsibilities & Implementation:
-
-Infrastructure Automation (Terraform):
-
-Created AWS EKS Cluster and supporting VPC resources using Infrastructure as Code (IaC) principles.
-
-Automated provisioning of EC2, IAM roles, networking, and node groups for scalable deployment.
-
-Continuous Integration (Jenkins + Maven + Trivy):
-
-Configured Jenkins multibranch pipeline triggered automatically on GitHub commits to the master branch.
-
-Integrated Maven for compiling, testing, and packaging the Java application.
-
-Used Trivy for vulnerability scanning of dependencies and Docker images before release.
-
-Containerization & Image Management (Docker):
-
-Developed a custom Dockerfile to build lightweight production images.
-
-Automated image tagging and pushing to Docker Hub on each successful build.
-
-Continuous Deployment (Kubernetes + Jenkins):
-
-Configured Kubernetes Deployment with 2 replicas for high availability.
-
-Exposed application via NodePort (30008) and monitored rollouts with Jenkins integration.
-
-Production deployment is restricted to the 25th of every month, ensuring stable and planned releases.
-
-Configuration Management (Ansible):
-
-Automated setup of Jenkins, Docker, Terraform, kubectl, eksctl, Maven, and Trivy on EC2 instances.
-
-Ensured consistent software environment across master and worker nodes.
-
-Security & Quality Assurance:
-
-Integrated Trivy scans in CI phase to identify and fix image vulnerabilities.
-
-Maintained controlled release workflow to prevent untested code from reaching production.",
-        skills: ["Terraform","Jenkins","Docker","Kubernetes","AWS EKS"]
+Fully automated CI/CD pipeline for Java app on AWS EKS using Terraform, Docker, Jenkins, Kubernetes, Ansible & Trivy security scans.",
+        skills: ["Terraform","Jenkins","Docker","Kubernetes","AWS EKS","trivy"]
     }
 };
 
